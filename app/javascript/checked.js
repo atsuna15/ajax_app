@@ -13,6 +13,8 @@ function check() {
       XHR.open("GET", `/posts/${postId}`, true);
       XHR.responseType = "json";
       XHR.send();
+
+      
       XHR.onload = () => {
         const item = XHR.response.post;
         if (item.checked === true){
